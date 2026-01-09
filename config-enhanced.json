@@ -1,0 +1,13 @@
+{
+  "browser": {
+    "browserName": "chromium",
+    "channel": "chrome",
+    "launchOptions": {
+      "headless": false
+    }
+  },
+  "server": {
+    "actionTimeout": 8000,
+    "navigationTimeout": 30000
+  }
+}
