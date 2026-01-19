@@ -25,7 +25,12 @@ export default defineConfig<TestOptions>({
   workers: process.env.CI ? 2 : undefined,
   reporter: 'list',
   projects: [
-    { name: 'chrome' },
+    {
+      name: 'chrome',
+      use: {
+        channel: 'msedge'
+      }
+    },
     ...process.env.MCP_IN_DOCKER ? [{
       name: 'chromium-docker',
       grep: /browser_navigate|browser_click/,
